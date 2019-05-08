@@ -8,7 +8,7 @@ properties([
 SITE_URL = params.SITE_URL ?: 'http://germaniumhq.com/'
 
 stage('Test URL') {
-    node {
+    node('linuxjava17') {
         deleteDir()
         checkout scm
 
